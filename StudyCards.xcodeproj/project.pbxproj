@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0247433D2771366B00933EEE /* CardRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0247433C2771366B00933EEE /* CardRepository.swift */; };
+		0247433F2771384D00933EEE /* CardListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0247433E2771384D00933EEE /* CardListViewModel.swift */; };
 		02DAA0FF27711836006A5F6C /* StudyCardsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02DAA0FE27711836006A5F6C /* StudyCardsApp.swift */; };
 		02DAA10127711836006A5F6C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02DAA10027711836006A5F6C /* ContentView.swift */; };
 		02DAA10327711837006A5F6C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 02DAA10227711837006A5F6C /* Assets.xcassets */; };
@@ -31,6 +32,7 @@
 
 /* Begin PBXFileReference section */
 		0247433C2771366B00933EEE /* CardRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardRepository.swift; sourceTree = "<group>"; };
+		0247433E2771384D00933EEE /* CardListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardListViewModel.swift; sourceTree = "<group>"; };
 		02DAA0FB27711836006A5F6C /* StudyCards.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StudyCards.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		02DAA0FE27711836006A5F6C /* StudyCardsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyCardsApp.swift; sourceTree = "<group>"; };
 		02DAA10027711836006A5F6C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -123,6 +125,7 @@
 		02DAA12727712964006A5F6C /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				0247433E2771384D00933EEE /* CardListViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -243,6 +246,7 @@
 				02DAA13027712E25006A5F6C /* Card.swift in Sources */,
 				02DAA13427713005006A5F6C /* CardListView.swift in Sources */,
 				02DAA0FF27711836006A5F6C /* StudyCardsApp.swift in Sources */,
+				0247433F2771384D00933EEE /* CardListViewModel.swift in Sources */,
 				02DAA138277130D5006A5F6C /* CardView.swift in Sources */,
 				0247433D2771366B00933EEE /* CardRepository.swift in Sources */,
 				02DAA13627713074006A5F6C /* NewCardForm.swift in Sources */,

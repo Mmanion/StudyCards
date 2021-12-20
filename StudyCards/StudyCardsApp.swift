@@ -6,9 +6,14 @@
 //
 
 import SwiftUI
+import Firebase
 
 @main
 struct StudyCardsApp: App {
+    init() {
+        FirebaseApp.configure()
+ //       Auth.auth().signInAnonymously()
+    }
     var body: some Scene {
         WindowGroup {
             ContentView()

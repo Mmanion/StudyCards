@@ -22,6 +22,7 @@
 		02DAA12027712035006A5F6C /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 02DAA11F27712035006A5F6C /* FirebaseStorage */; };
 		02DAA12227712035006A5F6C /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 02DAA12127712035006A5F6C /* FirebaseStorageCombine-Community */; };
 		02DAA12427712035006A5F6C /* FirebaseStorageSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = 02DAA12327712035006A5F6C /* FirebaseStorageSwift-Beta */; };
+		02DAA13027712E25006A5F6C /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02DAA12F27712E25006A5F6C /* Card.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		02DAA10227711837006A5F6C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		02DAA10527711837006A5F6C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		02DAA10E27711F80006A5F6C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		02DAA12F27712E25006A5F6C /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +136,7 @@
 		02DAA12A2771299C006A5F6C /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				02DAA12F27712E25006A5F6C /* Card.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -225,6 +228,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				02DAA10127711836006A5F6C /* ContentView.swift in Sources */,
+				02DAA13027712E25006A5F6C /* Card.swift in Sources */,
 				02DAA0FF27711836006A5F6C /* StudyCardsApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

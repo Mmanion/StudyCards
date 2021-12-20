@@ -15,6 +15,7 @@ struct Card: Identifiable {
   var userId: String?
 }
 
+
 #if DEBUG
 let testData = (1...10).map { i in
   Card(question: "Question #\(i)", answer: "Answer #\(i)")

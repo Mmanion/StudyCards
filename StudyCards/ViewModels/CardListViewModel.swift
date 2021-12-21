@@ -10,7 +10,19 @@ import Combine
 
 class CardListViewModel: ObservableObject {
     
+    init() {
+        cardRepository.$cards.map { cards in
+            cards.map(CardViewModel.init)
+        }
+        .assign(to: \.cardViewModels, on: self)
+        .store(in: &cancellables)
+    }
+    
     @Published var cardRepository = CardRepository()
+    
+    @Published var cardViewModels: [CardViewModel] = []
+    
+    private var cancellables: Set<AnyCancellable> = []
     
     func add(_ card: Card) {
         cardRepository.add(card)

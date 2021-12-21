@@ -1,5 +1,8 @@
 # StudyCards
 
+![Screen Shot 2021-12-21 at 4 44 15 PM](https://user-images.githubusercontent.com/8249723/147001463-f63944d1-06ca-4cd6-874a-29a8c9772824.png)
+![Screen Shot 2021-12-21 at 4 44 18 PM](https://user-images.githubusercontent.com/8249723/147001487-13cdf459-6c4b-444b-ac95-32cb311a8a94.png)
+
 
 
 

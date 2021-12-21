@@ -49,4 +49,24 @@ class CardRepository: ObservableObject {
         }
     }
     
+    func update(_ card: Card) {
+        guard let cardId = card.id else { return }
+        
+        do {
+            try store.collection(path).document(cardId).setData(from: card)
+        } catch {
+            fatalError("Unable to update card: \(error.localizedDescription)")
+        }  
+    }
+    
+    func remove(_ card: Card) {
+        guard let cardId = card.id else { return }
+        
+        store.collection(path).document(cardId).delete { error in
+            if let error = error {
+                print("Unable to remove card: \(error.localizedDescription)")
+            }
+        }
+    }
+    
 }

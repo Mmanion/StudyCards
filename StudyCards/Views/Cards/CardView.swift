@@ -47,6 +47,7 @@ struct CardView: View {
           title: Text("Remove Card"),
           message: Text("Are you sure you want to remove this card?"),
           primaryButton: .destructive(Text("Remove")) {
+              cardViewModel.remove()
           },
           secondaryButton: .cancel()
         )
@@ -63,6 +64,13 @@ struct CardView: View {
         .multilineTextAlignment(.center)
         .padding(20.0)
       Spacer()
+        if !cardViewModel.card.successful {
+            Text("You answered this one incorrectly before")
+                .foregroundColor(.white)
+                .font(.system(size: 11.0))
+                .fontWeight(.bold)
+                .padding()
+        }
     }
   }
 
@@ -76,9 +84,46 @@ struct CardView: View {
         .multilineTextAlignment(.center)
         .animation(.easeInOut)
       Spacer()
+        
+        HStack(spacing: 40) {
+            Button(action: markCardAsSuccessful) {
+                Image(systemName: "hand.thumbsup.fill")
+                    .padding()
+                    .background(Color.green)
+                    .font(.title)
+                    .foregroundColor(.white)
+                    .clipShape(Circle())
+            }
+            Button(action: markCardAsUnsuccessful) {
+                Image(systemName: "hand.thumbsdown.fill")
+                    .padding()
+                    .background(Color.blue)
+                    .font(.title)
+                    .foregroundColor(.white)
+                    .clipShape(Circle())
+            }
+        }
+        .padding()
     }
     .rotation3DEffect(.degrees(180), axis: (x: 0.0, y: 1.0, z: 0.0))
   }
+    
+    private func markCardAsUnsuccessful() {
+        var updatedCard = cardViewModel.card
+        updatedCard.successful = false
+        update(card: updatedCard)
+    }
+    
+    private func markCardAsSuccessful() {
+        var updatedCard = cardViewModel.card
+        updatedCard.successful = true
+        update(card: updatedCard)
+    }
+    
+    func update(card: Card) {
+        cardViewModel.update(card: card)
+        showContent.toggle()
+    }
 }
 
 struct CardView_Previews: PreviewProvider {

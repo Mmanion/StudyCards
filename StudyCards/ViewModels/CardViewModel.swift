@@ -26,5 +26,12 @@ class CardViewModel: ObservableObject, Identifiable {
             .store(in: &cancellables)
     }
     
+    func update(card: Card) {
+        cardRepository.update(card)
+    }
+    
+    func remove() {
+        cardRepository.remove(card)
+    }
     
 }

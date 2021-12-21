@@ -10,6 +10,7 @@ import SwiftUI
 struct CardListView: View {
   var cards: [Card] = []
   @State var showForm = false
+  @ObservedObject var cardListViewModel = CardListViewModel()
 
   var body: some View {
     NavigationView {
@@ -19,8 +20,7 @@ struct CardListView: View {
           GeometryReader { geometry in
             ScrollView(.horizontal) {
               HStack(spacing: 10) {
-                ForEach(cards, id: \.id) { card in
-                  CardView(card: card)
+                  ForEach(cardListViewModel.cardViewModels) { CardViewModel in CardView(cardViewModel: CardViewModel)
                     .padding([.leading, .trailing])
                 }
               }.frame(height: geometry.size.height)
@@ -45,6 +45,6 @@ struct CardListView: View {
 
 struct CardListView_Previews: PreviewProvider {
   static var previews: some View {
-    CardListView(cards: testData)
+      CardListView(cardListViewModel: CardListViewModel())
   }
 }

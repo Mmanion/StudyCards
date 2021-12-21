@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct CardView: View {
-  var card: Card
+    var cardViewModel: CardViewModel
   @State var showContent: Bool = false
   @State var viewState = CGSize.zero
   @State var showAlert = false
@@ -56,7 +56,7 @@ struct CardView: View {
   var frontView: some View {
     VStack(alignment: .center) {
       Spacer()
-      Text(card.question)
+        Text(cardViewModel.card.question)
         .foregroundColor(.white)
         .font(.system(size: 20))
         .fontWeight(.bold)
@@ -69,7 +69,7 @@ struct CardView: View {
   var backView: some View {
     VStack(alignment: .center) {
       Spacer()
-      Text(card.answer)
+        Text(cardViewModel.card.answer)
         .foregroundColor(.white)
         .font(.body)
         .padding(20.0)
@@ -84,6 +84,6 @@ struct CardView: View {
 struct CardView_Previews: PreviewProvider {
   static var previews: some View {
     let card = testData[0]
-    return CardView(card: card)
+      return CardView(cardViewModel: CardViewModel(card: card))
   }
 }

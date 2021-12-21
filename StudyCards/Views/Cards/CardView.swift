@@ -19,7 +19,7 @@ struct CardView: View {
       frontView.opacity(showContent ? 0 : 1)
     }
     .frame(width: 250, height: 400)
-    .background(Color.orange)
+    .background(Color.red)
     .cornerRadius(20)
     .shadow(color: Color(.blue).opacity(0.3), radius: 5, x: 10, y: 10)
     .rotation3DEffect(.degrees(showContent ? 180.0 : 0.0), axis: (x: 0, y: -1, z: 0))

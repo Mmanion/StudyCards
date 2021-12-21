@@ -64,7 +64,7 @@ class CardRepository: ObservableObject {
         do {
             var newCard = card
             newCard.userId = userId
-            _ = try store.collection(path).addDocument(from: card)
+            _ = try store.collection(path).addDocument(from: newCard)
         } catch {
             fatalError("Unable to add card: \(error.localizedDescription).")
         }

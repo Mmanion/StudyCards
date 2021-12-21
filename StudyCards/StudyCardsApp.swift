@@ -12,7 +12,7 @@ import Firebase
 struct StudyCardsApp: App {
     init() {
         FirebaseApp.configure()
- //       Auth.auth().signInAnonymously()
+        AuthenticationService.signIn()
     }
     var body: some Scene {
         WindowGroup {

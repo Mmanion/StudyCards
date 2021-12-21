@@ -10,6 +10,7 @@
 		0247433D2771366B00933EEE /* CardRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0247433C2771366B00933EEE /* CardRepository.swift */; };
 		0247433F2771384D00933EEE /* CardListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0247433E2771384D00933EEE /* CardListViewModel.swift */; };
 		0247434127713E8300933EEE /* CardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0247434027713E8300933EEE /* CardViewModel.swift */; };
+		0247434327725AD900933EEE /* AuthenticationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0247434227725AD900933EEE /* AuthenticationService.swift */; };
 		02DAA0FF27711836006A5F6C /* StudyCardsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02DAA0FE27711836006A5F6C /* StudyCardsApp.swift */; };
 		02DAA10127711836006A5F6C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02DAA10027711836006A5F6C /* ContentView.swift */; };
 		02DAA10327711837006A5F6C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 02DAA10227711837006A5F6C /* Assets.xcassets */; };
@@ -35,6 +36,7 @@
 		0247433C2771366B00933EEE /* CardRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardRepository.swift; sourceTree = "<group>"; };
 		0247433E2771384D00933EEE /* CardListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardListViewModel.swift; sourceTree = "<group>"; };
 		0247434027713E8300933EEE /* CardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewModel.swift; sourceTree = "<group>"; };
+		0247434227725AD900933EEE /* AuthenticationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationService.swift; sourceTree = "<group>"; };
 		02DAA0FB27711836006A5F6C /* StudyCards.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StudyCards.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		02DAA0FE27711836006A5F6C /* StudyCardsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyCardsApp.swift; sourceTree = "<group>"; };
 		02DAA10027711836006A5F6C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -112,6 +114,7 @@
 		02DAA12527712955006A5F6C /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				0247434227725AD900933EEE /* AuthenticationService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -254,6 +257,7 @@
 				0247433D2771366B00933EEE /* CardRepository.swift in Sources */,
 				02DAA13627713074006A5F6C /* NewCardForm.swift in Sources */,
 				0247434127713E8300933EEE /* CardViewModel.swift in Sources */,
+				0247434327725AD900933EEE /* AuthenticationService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

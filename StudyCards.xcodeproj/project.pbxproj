@@ -11,6 +11,18 @@
 		0247433F2771384D00933EEE /* CardListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0247433E2771384D00933EEE /* CardListViewModel.swift */; };
 		0247434127713E8300933EEE /* CardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0247434027713E8300933EEE /* CardViewModel.swift */; };
 		0247434327725AD900933EEE /* AuthenticationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0247434227725AD900933EEE /* AuthenticationService.swift */; };
+		024743462773DAE300933EEE /* Secrets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024743452773DAE300933EEE /* Secrets.swift */; };
+		0247434E2773DE8E00933EEE /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0247434D2773DE8E00933EEE /* WidgetKit.framework */; };
+		024743502773DE8E00933EEE /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0247434F2773DE8E00933EEE /* SwiftUI.framework */; };
+		024743532773DE8E00933EEE /* WidgetCards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024743522773DE8E00933EEE /* WidgetCards.swift */; };
+		024743562773DE9000933EEE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 024743552773DE9000933EEE /* Assets.xcassets */; };
+		024743582773DE9000933EEE /* WidgetCards.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 024743542773DE8E00933EEE /* WidgetCards.intentdefinition */; };
+		024743592773DE9000933EEE /* WidgetCards.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 024743542773DE8E00933EEE /* WidgetCards.intentdefinition */; };
+		0247435C2773DE9000933EEE /* WidgetCardsExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 0247434B2773DE8E00933EEE /* WidgetCardsExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		024743612773DEAB00933EEE /* Secrets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024743452773DAE300933EEE /* Secrets.swift */; };
+		024743632773E20B00933EEE /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 024743622773E20B00933EEE /* FirebaseAuth */; };
+		024743652773E20B00933EEE /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 024743642773E20B00933EEE /* FirebaseFirestore */; };
+		024743672773FBFD00933EEE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 02DAA10E27711F80006A5F6C /* GoogleService-Info.plist */; };
 		02DAA0FF27711836006A5F6C /* StudyCardsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02DAA0FE27711836006A5F6C /* StudyCardsApp.swift */; };
 		02DAA10127711836006A5F6C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02DAA10027711836006A5F6C /* ContentView.swift */; };
 		02DAA10327711837006A5F6C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 02DAA10227711837006A5F6C /* Assets.xcassets */; };
@@ -32,11 +44,45 @@
 		02DAA138277130D5006A5F6C /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02DAA137277130D5006A5F6C /* CardView.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		0247435A2773DE9000933EEE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 02DAA0F327711836006A5F6C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0247434A2773DE8E00933EEE;
+			remoteInfo = WidgetCardsExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		024743602773DE9000933EEE /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				0247435C2773DE9000933EEE /* WidgetCardsExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		0247433C2771366B00933EEE /* CardRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardRepository.swift; sourceTree = "<group>"; };
 		0247433E2771384D00933EEE /* CardListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardListViewModel.swift; sourceTree = "<group>"; };
 		0247434027713E8300933EEE /* CardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewModel.swift; sourceTree = "<group>"; };
 		0247434227725AD900933EEE /* AuthenticationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationService.swift; sourceTree = "<group>"; };
+		024743442773BA7800933EEE /* StudyCards.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = StudyCards.entitlements; sourceTree = "<group>"; };
+		024743452773DAE300933EEE /* Secrets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Secrets.swift; sourceTree = "<group>"; };
+		0247434B2773DE8E00933EEE /* WidgetCardsExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = WidgetCardsExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		0247434D2773DE8E00933EEE /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		0247434F2773DE8E00933EEE /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		024743522773DE8E00933EEE /* WidgetCards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetCards.swift; sourceTree = "<group>"; };
+		024743542773DE8E00933EEE /* WidgetCards.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = WidgetCards.intentdefinition; sourceTree = "<group>"; };
+		024743552773DE9000933EEE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		024743572773DE9000933EEE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		024743662773F5F100933EEE /* WidgetCardsExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WidgetCardsExtension.entitlements; sourceTree = "<group>"; };
 		02DAA0FB27711836006A5F6C /* StudyCards.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StudyCards.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		02DAA0FE27711836006A5F6C /* StudyCardsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyCardsApp.swift; sourceTree = "<group>"; };
 		02DAA10027711836006A5F6C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -50,6 +96,17 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		024743482773DE8E00933EEE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				024743502773DE8E00933EEE /* SwiftUI.framework in Frameworks */,
+				024743652773E20B00933EEE /* FirebaseFirestore in Frameworks */,
+				024743632773E20B00933EEE /* FirebaseAuth in Frameworks */,
+				0247434E2773DE8E00933EEE /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		02DAA0F827711836006A5F6C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -70,10 +127,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0247434C2773DE8E00933EEE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0247434D2773DE8E00933EEE /* WidgetKit.framework */,
+				0247434F2773DE8E00933EEE /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		024743512773DE8E00933EEE /* WidgetCards */ = {
+			isa = PBXGroup;
+			children = (
+				024743522773DE8E00933EEE /* WidgetCards.swift */,
+				024743542773DE8E00933EEE /* WidgetCards.intentdefinition */,
+				024743552773DE9000933EEE /* Assets.xcassets */,
+				024743572773DE9000933EEE /* Info.plist */,
+			);
+			path = WidgetCards;
+			sourceTree = "<group>";
+		};
 		02DAA0F227711836006A5F6C = {
 			isa = PBXGroup;
 			children = (
 				02DAA0FD27711836006A5F6C /* StudyCards */,
+				024743512773DE8E00933EEE /* WidgetCards */,
+				0247434C2773DE8E00933EEE /* Frameworks */,
 				02DAA0FC27711836006A5F6C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -82,6 +161,7 @@
 			isa = PBXGroup;
 			children = (
 				02DAA0FB27711836006A5F6C /* StudyCards.app */,
+				0247434B2773DE8E00933EEE /* WidgetCardsExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -89,6 +169,8 @@
 		02DAA0FD27711836006A5F6C /* StudyCards */ = {
 			isa = PBXGroup;
 			children = (
+				024743662773F5F100933EEE /* WidgetCardsExtension.entitlements */,
+				024743442773BA7800933EEE /* StudyCards.entitlements */,
 				02DAA12527712955006A5F6C /* Services */,
 				02DAA1262771295B006A5F6C /* Repo */,
 				02DAA12727712964006A5F6C /* ViewModels */,
@@ -99,6 +181,7 @@
 				02DAA10027711836006A5F6C /* ContentView.swift */,
 				02DAA10227711837006A5F6C /* Assets.xcassets */,
 				02DAA10427711837006A5F6C /* Preview Content */,
+				024743452773DAE300933EEE /* Secrets.swift */,
 			);
 			path = StudyCards;
 			sourceTree = "<group>";
@@ -165,6 +248,27 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		0247434A2773DE8E00933EEE /* WidgetCardsExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0247435D2773DE9000933EEE /* Build configuration list for PBXNativeTarget "WidgetCardsExtension" */;
+			buildPhases = (
+				024743472773DE8E00933EEE /* Sources */,
+				024743482773DE8E00933EEE /* Frameworks */,
+				024743492773DE8E00933EEE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WidgetCardsExtension;
+			packageProductDependencies = (
+				024743622773E20B00933EEE /* FirebaseAuth */,
+				024743642773E20B00933EEE /* FirebaseFirestore */,
+			);
+			productName = WidgetCardsExtension;
+			productReference = 0247434B2773DE8E00933EEE /* WidgetCardsExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		02DAA0FA27711836006A5F6C /* StudyCards */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 02DAA10927711837006A5F6C /* Build configuration list for PBXNativeTarget "StudyCards" */;
@@ -172,10 +276,12 @@
 				02DAA0F727711836006A5F6C /* Sources */,
 				02DAA0F827711836006A5F6C /* Frameworks */,
 				02DAA0F927711836006A5F6C /* Resources */,
+				024743602773DE9000933EEE /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				0247435B2773DE9000933EEE /* PBXTargetDependency */,
 			);
 			name = StudyCards;
 			packageProductDependencies = (
@@ -204,6 +310,9 @@
 				LastSwiftUpdateCheck = 1320;
 				LastUpgradeCheck = 1320;
 				TargetAttributes = {
+					0247434A2773DE8E00933EEE = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
 					02DAA0FA27711836006A5F6C = {
 						CreatedOnToolsVersion = 13.2.1;
 					};
@@ -226,11 +335,21 @@
 			projectRoot = "";
 			targets = (
 				02DAA0FA27711836006A5F6C /* StudyCards */,
+				0247434A2773DE8E00933EEE /* WidgetCardsExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		024743492773DE8E00933EEE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				024743562773DE9000933EEE /* Assets.xcassets in Resources */,
+				024743672773FBFD00933EEE /* GoogleService-Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		02DAA0F927711836006A5F6C /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -244,6 +363,16 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		024743472773DE8E00933EEE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				024743582773DE9000933EEE /* WidgetCards.intentdefinition in Sources */,
+				024743612773DEAB00933EEE /* Secrets.swift in Sources */,
+				024743532773DE8E00933EEE /* WidgetCards.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		02DAA0F727711836006A5F6C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -258,12 +387,78 @@
 				02DAA13627713074006A5F6C /* NewCardForm.swift in Sources */,
 				0247434127713E8300933EEE /* CardViewModel.swift in Sources */,
 				0247434327725AD900933EEE /* AuthenticationService.swift in Sources */,
+				024743592773DE9000933EEE /* WidgetCards.intentdefinition in Sources */,
+				024743462773DAE300933EEE /* Secrets.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		0247435B2773DE9000933EEE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0247434A2773DE8E00933EEE /* WidgetCardsExtension */;
+			targetProxy = 0247435A2773DE9000933EEE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		0247435E2773DE9000933EEE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = WidgetCardsExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 277X6YU6QD;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = WidgetCards/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = WidgetCards;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sourselabs.StudyCards.WidgetCards;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		0247435F2773DE9000933EEE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = WidgetCardsExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 277X6YU6QD;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = WidgetCards/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = WidgetCards;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sourselabs.StudyCards.WidgetCards;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		02DAA10727711837006A5F6C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -383,8 +578,10 @@
 		02DAA10A27711837006A5F6C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = StudyCards/StudyCards.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"StudyCards/Preview Content\"";
@@ -412,8 +609,10 @@
 		02DAA10B27711837006A5F6C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = StudyCards/StudyCards.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"StudyCards/Preview Content\"";
@@ -441,6 +640,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		0247435D2773DE9000933EEE /* Build configuration list for PBXNativeTarget "WidgetCardsExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0247435E2773DE9000933EEE /* Debug */,
+				0247435F2773DE9000933EEE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		02DAA0F627711836006A5F6C /* Build configuration list for PBXProject "StudyCards" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -473,6 +681,16 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		024743622773E20B00933EEE /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 02DAA11027712035006A5F6C /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		024743642773E20B00933EEE /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 02DAA11027712035006A5F6C /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
 		02DAA11127712035006A5F6C /* FirebaseAnalytics */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 02DAA11027712035006A5F6C /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;

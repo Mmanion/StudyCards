@@ -12,6 +12,15 @@ import Firebase
 struct StudyCardsApp: App {
     init() {
         FirebaseApp.configure()
+        
+        
+        do {
+            try Auth.auth().useUserAccessGroup("\(teamId).com.sourselabs.StudyCards")
+        }
+        catch {
+            print(error.localizedDescription)
+        }
+        
         AuthenticationService.signIn()
     }
     var body: some Scene {

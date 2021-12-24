@@ -25,7 +25,7 @@ struct Provider: IntentTimelineProvider {
         // Fetching data from Firebase for every 15 min
         let date = Date()
         
-        let nextUpdate = Calendar.current.date(byAdding: .minute, value: 15, to: date)!
+        let nextUpdate = Calendar.current.date(byAdding: .minute, value: 5, to: date)!
         
         fetchFromDB { studyCard in
             let card = SimpleEntry(date: date, configuration: configuration, studyCardData: studyCard)
@@ -39,24 +39,56 @@ struct Provider: IntentTimelineProvider {
     // Firebase Data...
     func fetchFromDB(completion: @escaping(StudyCardWidgetModel)->()){
         
-        // You can fetch the current user Data Like...
-//        guard let _ = Auth.auth().currentUser else{
-//            completion(StudyCardWidgetModel(question: "Fail to Auth user", answer: ""))
-//            return
+ //        You can fetch the current user Data Like...
+        guard let _ = Auth.auth().currentUser else{
+            completion(StudyCardWidgetModel(question: "Fail to Auth user", answer: ""))
+            return
+        }
+        
+//        let db = Firestore.firestore().collection("cards").document("zvZuhqhhJHkw4Hz767wL")
+//
+//        db.getDocument { snap, err in
+//            guard let doc = snap?.data() else {
+//                completion(StudyCardWidgetModel(question: "", answer: "Get Document Error"))
+//                return
+//            }
+//            let question = doc["question"] as? String ?? ""
+//            let answer = doc["answer"] as? String ?? ""
+//
+//            completion(StudyCardWidgetModel(question: question, answer: answer))
 //        }
         
-        let db = Firestore.firestore().collection("cards").document("zvZuhqhhJHkw4Hz767wL")
+        let db = Firestore.firestore().collection("cards")
+        var studyCards: [StudyCardWidgetModel] = []
         
-        db.getDocument { snap, err in
-            guard let doc = snap?.data() else {
-                completion(StudyCardWidgetModel(question: "", answer: "Get Document Error"))
-                return
+        db.getDocuments { (querySnapshot, err) in
+            if let err = err {
+                print("Error getting documents: \(err)")
+            } else {
+                studyCards = []
+                for document in querySnapshot!.documents {
+                    let data = document.data()
+                    print("\(document.documentID) => \(document.data())")
+                    
+                    let question = data["question"] as? String ?? ""
+                    let answer = data["answer"] as? String ?? ""
+                    let newStudyCard = StudyCardWidgetModel(question: question, answer: answer)
+                    studyCards.append(newStudyCard)
+                }
             }
-            let question = doc["question"] as? String ?? ""
-            let answer = doc["answer"] as? String ?? ""
+            let randomIndex = Int.random(in:0...studyCards.count-1)
             
-            completion(StudyCardWidgetModel(question: question, answer: answer))
+            let randomSelected = studyCards[randomIndex]
+            
+//            let question = doc["question"] as? String ?? ""
+//            let answer = doc["answer"] as? String ?? ""
+            
+            completion(StudyCardWidgetModel(question: randomSelected.question, answer: randomSelected.answer))
         }
+        
+        
+        
+        
         
     }
 }
@@ -115,7 +147,8 @@ struct WidgetCards: Widget {
         IntentConfiguration(kind: kind, intent: ConfigurationIntent.self, provider: Provider()) { entry in
             WidgetCardsEntryView(entry: entry)
         }
-        .supportedFamilies([.systemLarge])
+        .supportedFamilies([.systemLarge, .systemMedium, .systemSmall])
+        
         .configurationDisplayName("Study Cards Widget")
         .description("Study Card")
     }

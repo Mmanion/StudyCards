@@ -104,17 +104,18 @@ struct WidgetCardsEntryView : View {
 
     var body: some View {
         ZStack{
-            
-            if let card = entry.studyCardData {
-                    Text("\(card.question)").padding()
+            VStack {
+                if let card = entry.studyCardData {
+               //     Text("\(card.question)").font(.system(size: 15.0)).padding()
+                        
+                        Text("\(card.answer)").font(.custom("Hiragino Sans", size: 14))
                     
-              //      Text("\(card.answer)")
-                
-            } else {
-                //loading view...
-                Text("Fetching Data...")
+                } else {
+                    //loading view...
+                    Text("Fetching Data...").font(.custom("Hiragino Sans", size: 20))
+                }
             }
-        }
+        }.padding()
     }
 }
 
@@ -157,6 +158,6 @@ struct WidgetCards: Widget {
 struct WidgetCards_Previews: PreviewProvider {
     static var previews: some View {
         WidgetCardsEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
-            .previewContext(WidgetPreviewContext(family: .systemSmall))
+            .previewContext(WidgetPreviewContext(family: .systemMedium))
     }
 }

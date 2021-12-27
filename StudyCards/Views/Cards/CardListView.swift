@@ -16,16 +16,22 @@ struct CardListView: View {
     NavigationView {
       VStack {
         Spacer()
-        VStack {
-          GeometryReader { geometry in
-            ScrollView(.horizontal) {
-              HStack(spacing: 10) {
-                  ForEach(cardListViewModel.cardViewModels) { CardViewModel in CardView(cardViewModel: CardViewModel)
-                    .padding([.leading, .trailing])
+        ScrollView(.vertical) {
+            VStack {
+                ForEach(cardListViewModel.cardViewModels) { cardVM in
+                    CardCell(cardVM: cardVM)
                 }
-              }.frame(height: geometry.size.height)
             }
-          }
+            
+//          GeometryReader { geometry in
+//            ScrollView(.horizontal) {
+//              HStack(spacing: 10) {
+//                  ForEach(cardListViewModel.cardViewModels) { CardViewModel in CardView(cardViewModel: CardViewModel)
+//                    .padding([.leading, .trailing])
+//                }
+//              }.frame(height: geometry.size.height)
+//            }
+//          }
         }
         Spacer()
       }

@@ -41,7 +41,7 @@ struct Provider: IntentTimelineProvider {
         
  //        You can fetch the current user Data Like...
         guard let _ = Auth.auth().currentUser else{
-            completion(StudyCardWidgetModel(question: "Fail to Auth user", answer: ""))
+            completion(StudyCardWidgetModel(cardText: "Fail to Auth user"))
             return
         }
         
@@ -58,7 +58,7 @@ struct Provider: IntentTimelineProvider {
 //            completion(StudyCardWidgetModel(question: question, answer: answer))
 //        }
         
-        let db = Firestore.firestore().collection("cards")
+        let db = Firestore.firestore().collection("cards").whereField("active", isEqualTo: true)
         var studyCards: [StudyCardWidgetModel] = []
         
         db.getDocuments { (querySnapshot, err) in
@@ -70,9 +70,8 @@ struct Provider: IntentTimelineProvider {
                     let data = document.data()
                     print("\(document.documentID) => \(document.data())")
                     
-                    let question = data["question"] as? String ?? ""
-                    let answer = data["answer"] as? String ?? ""
-                    let newStudyCard = StudyCardWidgetModel(question: question, answer: answer)
+                    let cardText = data["cardText"] as? String ?? ""
+                    let newStudyCard = StudyCardWidgetModel(cardText: cardText)
                     studyCards.append(newStudyCard)
                 }
             }
@@ -80,10 +79,7 @@ struct Provider: IntentTimelineProvider {
             
             let randomSelected = studyCards[randomIndex]
             
-//            let question = doc["question"] as? String ?? ""
-//            let answer = doc["answer"] as? String ?? ""
-            
-            completion(StudyCardWidgetModel(question: randomSelected.question, answer: randomSelected.answer))
+            completion(StudyCardWidgetModel(cardText: randomSelected.cardText))
         }
         
         
@@ -108,7 +104,7 @@ struct WidgetCardsEntryView : View {
                 if let card = entry.studyCardData {
                //     Text("\(card.question)").font(.system(size: 15.0)).padding()
                         
-                        Text("\(card.answer)").font(.custom("Hiragino Sans", size: 14))
+                        Text("\(card.cardText)").font(.custom("Hiragino Sans", size: 14))
                     
                 } else {
                     //loading view...
@@ -123,9 +119,8 @@ struct WidgetCardsEntryView : View {
 
 struct StudyCardWidgetModel: Identifiable {
     var id: String?
-    var question: String
-    var answer: String
-    var successful: Bool = true
+    var cardText: String
+    var active: Bool = true
     var userId: String?
 }
 

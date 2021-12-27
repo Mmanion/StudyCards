@@ -8,23 +8,16 @@
 import SwiftUI
 
 struct NewCardForm: View {
-  @State var question: String = ""
-  @State var answer: String = ""
+  @State var cardText: String = ""
   @Environment(\.presentationMode) var presentationMode
   @ObservedObject var cardListViewModel: CardListViewModel
 
   var body: some View {
     VStack(alignment: .center, spacing: 30) {
       VStack(alignment: .leading, spacing: 10) {
-        Text("Question")
+        Text("cardText")
           .foregroundColor(.gray)
-        TextField("Enter the question", text: $question)
-          .textFieldStyle(RoundedBorderTextFieldStyle())
-      }
-      VStack(alignment: .leading, spacing: 10) {
-        Text("Answer")
-          .foregroundColor(.gray)
-        TextField("Enter the answer", text: $answer)
+        TextField("Enter the text", text: $cardText)
           .textFieldStyle(RoundedBorderTextFieldStyle())
       }
       Button(action: addCard) {
@@ -37,7 +30,7 @@ struct NewCardForm: View {
   }
     
     private func addCard() {
-        let card = Card(question: question, answer: answer)
+        let card = Card( cardText: cardText)
         cardListViewModel.add(card)
         presentationMode.wrappedValue.dismiss()
     }

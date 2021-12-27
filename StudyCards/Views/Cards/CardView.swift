@@ -57,14 +57,14 @@ struct CardView: View {
   var frontView: some View {
     VStack(alignment: .center) {
       Spacer()
-        Text(cardViewModel.card.question)
+        Text(cardViewModel.card.cardText)
         .foregroundColor(.white)
         .font(.system(size: 20))
         .fontWeight(.bold)
         .multilineTextAlignment(.center)
         .padding(20.0)
       Spacer()
-        if !cardViewModel.card.successful {
+        if !cardViewModel.card.active {
             Text("You answered this one incorrectly before")
                 .foregroundColor(.white)
                 .font(.system(size: 11.0))
@@ -77,7 +77,6 @@ struct CardView: View {
   var backView: some View {
     VStack(alignment: .center) {
       Spacer()
-        Text(cardViewModel.card.answer)
         .foregroundColor(.white)
         .font(.body)
         .padding(20.0)
@@ -110,13 +109,13 @@ struct CardView: View {
     
     private func markCardAsUnsuccessful() {
         var updatedCard = cardViewModel.card
-        updatedCard.successful = false
+        updatedCard.active = false
         update(card: updatedCard)
     }
     
     private func markCardAsSuccessful() {
         var updatedCard = cardViewModel.card
-        updatedCard.successful = true
+        updatedCard.active = true
         update(card: updatedCard)
     }
     

@@ -28,4 +28,18 @@ class CardListViewModel: ObservableObject {
         cardRepository.add(card)
     }
     
+    func remove(_ card: Card) {
+        cardRepository.remove(card)
+    }
+    
+    // Not sure why it is "Index - 1" instead of just Index, should find that out.
+    func delete(at offsets: IndexSet) {
+        for index in offsets {
+            cardViewModels.remove(at: index - 1)
+            
+            let deleteArrayItem = cardViewModels[index - 1].card
+            remove(deleteArrayItem)
+        }
+    }
+    
 }

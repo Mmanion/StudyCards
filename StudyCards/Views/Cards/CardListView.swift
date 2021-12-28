@@ -14,30 +14,15 @@ struct CardListView: View {
 
   var body: some View {
     NavigationView {
-      VStack {
-        Spacer()
-        ScrollView(.vertical) {
-            VStack {
-                ForEach(cardListViewModel.cardViewModels) { cardVM in
-                    CardCell(cardVM: cardVM)
-                }
+        List {
+            ForEach(cardListViewModel.cardViewModels) { cardVM in
+                CardCell(cardVM: cardVM)
             }
-            
-//          GeometryReader { geometry in
-//            ScrollView(.horizontal) {
-//              HStack(spacing: 10) {
-//                  ForEach(cardListViewModel.cardViewModels) { CardViewModel in CardView(cardViewModel: CardViewModel)
-//                    .padding([.leading, .trailing])
-//                }
-//              }.frame(height: geometry.size.height)
-//            }
-//          }
+            .onDelete(perform: cardListViewModel.delete)
         }
-        Spacer()
-      }
-      .sheet(isPresented: $showForm) {
-        NewCardForm(cardListViewModel: CardListViewModel())
-      }
+        .sheet(isPresented: $showForm) {
+            NewCardForm(cardListViewModel: CardListViewModel())
+        }
       .navigationBarTitle("Study Cards")
         // swiftlint:disable multiple_closures_with_trailing_closure
         .navigationBarItems(trailing: Button(action: { showForm.toggle() }) {

@@ -34,4 +34,13 @@ class CardViewModel: ObservableObject, Identifiable {
         cardRepository.remove(card)
     }
     
+    func toggleActive(card: Card) {
+        if card.active == true {
+            self.card.active = false
+        } else {
+            self.card.active = true
+        }
+        update(card: card)
+    }
+    
 }

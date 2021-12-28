@@ -18,11 +18,13 @@ struct CardCell: View {
         HStack {
             Image(systemName: cardVM.card.active ? "checkmark.circle.fill" : "circle")
                 .resizable()
-                .frame(width: 20, height: 20)
+                .frame(width: 30, height: 30)
                 .onTapGesture {
+                    // not the SwiftUI way of doing things, research further.
                     self.cardVM.card.active.toggle()
+                    self.cardVM.toggleActive(card: cardVM.card)
                 }
-            Text("\(cardVM.card.cardText)").padding()
+            Text("\(cardVM.card.cardText)").font(.custom("Hiragino Sans", size: 14)).padding()
         }
     }
 }

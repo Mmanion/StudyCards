@@ -24,6 +24,7 @@
 		024743652773E20B00933EEE /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 024743642773E20B00933EEE /* FirebaseFirestore */; };
 		024743672773FBFD00933EEE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 02DAA10E27711F80006A5F6C /* GoogleService-Info.plist */; };
 		02474369277A6B5600933EEE /* CardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02474368277A6B5500933EEE /* CardCell.swift */; };
+		0247436B277BF8FB00933EEE /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0247436A277BF8FA00933EEE /* Constants.swift */; };
 		02DAA0FF27711836006A5F6C /* StudyCardsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02DAA0FE27711836006A5F6C /* StudyCardsApp.swift */; };
 		02DAA10127711836006A5F6C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02DAA10027711836006A5F6C /* ContentView.swift */; };
 		02DAA10327711837006A5F6C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 02DAA10227711837006A5F6C /* Assets.xcassets */; };
@@ -85,6 +86,7 @@
 		024743572773DE9000933EEE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		024743662773F5F100933EEE /* WidgetCardsExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WidgetCardsExtension.entitlements; sourceTree = "<group>"; };
 		02474368277A6B5500933EEE /* CardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCell.swift; sourceTree = "<group>"; };
+		0247436A277BF8FA00933EEE /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		02DAA0FB27711836006A5F6C /* StudyCards.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StudyCards.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		02DAA0FE27711836006A5F6C /* StudyCardsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyCardsApp.swift; sourceTree = "<group>"; };
 		02DAA10027711836006A5F6C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -200,6 +202,7 @@
 			isa = PBXGroup;
 			children = (
 				0247434227725AD900933EEE /* AuthenticationService.swift */,
+				0247436A277BF8FA00933EEE /* Constants.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -391,6 +394,7 @@
 				0247434127713E8300933EEE /* CardViewModel.swift in Sources */,
 				0247434327725AD900933EEE /* AuthenticationService.swift in Sources */,
 				024743592773DE9000933EEE /* WidgetCards.intentdefinition in Sources */,
+				0247436B277BF8FB00933EEE /* Constants.swift in Sources */,
 				02474369277A6B5600933EEE /* CardCell.swift in Sources */,
 				024743462773DAE300933EEE /* Secrets.swift in Sources */,
 			);

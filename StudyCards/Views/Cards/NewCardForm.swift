@@ -14,15 +14,28 @@ struct NewCardForm: View {
 
   var body: some View {
     VStack(alignment: .center, spacing: 30) {
-      VStack(alignment: .leading, spacing: 10) {
-        Text("cardText")
-          .foregroundColor(.gray)
-        TextField("Enter the text", text: $cardText)
-          .textFieldStyle(RoundedBorderTextFieldStyle())
+      VStack(alignment: .leading, spacing: 5) {
+        Text("Create StudyCard")
+        //  .foregroundColor(.black)
+        TextEditor(text: $cardText)
+              .cornerRadius(25)
+              .frame(height: UIScreen.screenHeight / 3, alignment: .center)
+              .cornerRadius(25)
+              .border(Color.blue, width: 2)
+              .lineSpacing(10)
+              .autocapitalization(.sentences)
+              .disableAutocorrection(true)
+              .padding()
+        //  .textFieldStyle(RoundedBorderTextFieldStyle())
       }
       Button(action: addCard) {
-        Text("Add New Card")
-          .foregroundColor(.blue)
+        Text("Submit")
+              .frame(width: UIScreen.screenWidth / 3, height: 40)
+              .padding(10)
+              .font(.custom("Hiragino Sans", size: 14))
+              .foregroundColor(.white)
+              .background(RoundedRectangle(cornerRadius: 30))
+              .foregroundColor(.blue)
       }
       Spacer()
     }

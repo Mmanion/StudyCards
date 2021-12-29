@@ -33,6 +33,7 @@ class CardListViewModel: ObservableObject {
     }
     
     // Not sure why it is "Index - 1" instead of just Index, should find that out.
+    // need to fix this bug
     func delete(at offsets: IndexSet) {
         for index in offsets {
             cardViewModels.remove(at: index - 1)

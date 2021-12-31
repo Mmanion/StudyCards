@@ -10,6 +10,7 @@ import SwiftUI
 struct CardListView: View {
   var cards: [Card] = []
   @State var showForm = false
+    @State private var showSettings: Int? = 0
   @ObservedObject var cardListViewModel = CardListViewModel()
 
   var body: some View {
@@ -24,7 +25,15 @@ struct CardListView: View {
             NewCardForm(cardListViewModel: CardListViewModel())
         }
       .navigationBarTitle("Study Cards")
+        /// Find out the proper formatting for this navigationLink
+        // find out what this comment about swift lint means and where it came from
         // swiftlint:disable multiple_closures_with_trailing_closure
+      .navigationBarItems(leading: Button(action: { } ) {
+          NavigationLink(destination: SettingsView(), label: {
+              Image(systemName: "square")
+                .font(.title)
+          })
+      })
         .navigationBarItems(trailing: Button(action: { showForm.toggle() }) {
           Image(systemName: "plus")
             .font(.title)

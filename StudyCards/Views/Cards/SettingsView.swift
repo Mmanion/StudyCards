@@ -16,7 +16,7 @@ struct SettingsView: View {
                     
             VStack {
                 Text("How often Widget shows new Cards")
-                Slider(value: settingsViewModel.$minuteInterval, in: 0...60)
+                Slider(value: settingsViewModel.$minuteInterval, in: 0...60, step: 1)
                 Text("Every \(settingsViewModel.minuteInterval) minutes")
             }
             .navigationTitle("Settings")

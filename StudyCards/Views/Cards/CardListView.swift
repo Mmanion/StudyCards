@@ -10,7 +10,7 @@ import SwiftUI
 struct CardListView: View {
   var cards: [Card] = []
   @State var showForm = false
-    @State private var showSettings: Int? = 0
+  @State private var showSettings: Int? = 0
   @ObservedObject var cardListViewModel = CardListViewModel()
 
   var body: some View {

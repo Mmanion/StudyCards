@@ -25,7 +25,9 @@ struct Provider: IntentTimelineProvider {
         // Fetching data from Firebase for every 15 min
         let date = Date()
         
-        let nextUpdate = Calendar.current.date(byAdding: .minute, value: 5, to: date)!
+        let minuteValue = UserDefaults.standard.integer(forKey: "minuteInterval")
+        
+        let nextUpdate = Calendar.current.date(byAdding: .minute, value: minuteValue, to: date)!
         
         fetchFromDB { studyCard in
             let card = SimpleEntry(date: date, configuration: configuration, studyCardData: studyCard)

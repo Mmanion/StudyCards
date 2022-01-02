@@ -27,12 +27,16 @@ struct Provider: IntentTimelineProvider {
         
         let minuteValue = UserDefaults.standard.integer(forKey: "minuteInterval")
         
+        
+        
         let nextUpdate = Calendar.current.date(byAdding: .minute, value: minuteValue, to: date)!
         
         fetchFromDB { studyCard in
             let card = SimpleEntry(date: date, configuration: configuration, studyCardData: studyCard)
             
             let timeline = Timeline(entries: [card], policy: .after(nextUpdate))
+            
+            
             
             completion(timeline)
         }

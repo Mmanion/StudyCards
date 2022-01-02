@@ -11,7 +11,7 @@ import SwiftUI
 
 class SettingsViewModel: ObservableObject {
     
-    @AppStorage("minuteInterval") var minuteInterval: Double = 3
+    @AppStorage("minuteInterval") var minuteInterval: Double = 15
 
     init() {
         

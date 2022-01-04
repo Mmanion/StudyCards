@@ -10,7 +10,18 @@ import Firebase
 
 struct ContentView: View {
     var body: some View {
-        CardListView()
+        TabView {
+            CardListView()
+                .tabItem {
+                    Image(systemName: "house")
+             //       Text("Home")
+                }
+            Text("Settings")
+                .tabItem {
+                    Image(systemName: "magnifyingglass")
+             //       Text("Search")
+                }
+        }
     }
 }
 

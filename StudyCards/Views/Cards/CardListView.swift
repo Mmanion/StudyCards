@@ -30,7 +30,7 @@ struct CardListView: View {
         // swiftlint:disable multiple_closures_with_trailing_closure
       .navigationBarItems(leading: Button(action: { } ) {
           NavigationLink(destination: SettingsView(), label: {
-              Image(systemName: "square")
+              Image(systemName: "gear")
                 .font(.title)
           })
       })

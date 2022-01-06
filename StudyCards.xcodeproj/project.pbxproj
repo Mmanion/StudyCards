@@ -47,6 +47,7 @@
 		02E1754A277E4D2300EFDB01 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E17549277E4D2300EFDB01 /* SettingsView.swift */; };
 		02E1754C277E4D3300EFDB01 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E1754B277E4D3300EFDB01 /* SettingsViewModel.swift */; };
 		02E1754E278674D300EFDB01 /* CardListDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E1754D278674D300EFDB01 /* CardListDetailView.swift */; };
+		02E175502786A37900EFDB01 /* CardListDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E1754F2786A37900EFDB01 /* CardListDetailViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -103,6 +104,7 @@
 		02E17549277E4D2300EFDB01 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		02E1754B277E4D3300EFDB01 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
 		02E1754D278674D300EFDB01 /* CardListDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardListDetailView.swift; sourceTree = "<group>"; };
+		02E1754F2786A37900EFDB01 /* CardListDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardListDetailViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -227,6 +229,7 @@
 				0247433E2771384D00933EEE /* CardListViewModel.swift */,
 				0247434027713E8300933EEE /* CardViewModel.swift */,
 				02E1754B277E4D3300EFDB01 /* SettingsViewModel.swift */,
+				02E1754F2786A37900EFDB01 /* CardListDetailViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -403,6 +406,7 @@
 				02DAA13627713074006A5F6C /* NewCardForm.swift in Sources */,
 				0247434127713E8300933EEE /* CardViewModel.swift in Sources */,
 				0247434327725AD900933EEE /* AuthenticationService.swift in Sources */,
+				02E175502786A37900EFDB01 /* CardListDetailViewModel.swift in Sources */,
 				024743592773DE9000933EEE /* WidgetCards.intentdefinition in Sources */,
 				0247436B277BF8FB00933EEE /* Constants.swift in Sources */,
 				02474369277A6B5600933EEE /* CardCell.swift in Sources */,

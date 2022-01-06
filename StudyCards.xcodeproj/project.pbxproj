@@ -46,6 +46,7 @@
 		02DAA138277130D5006A5F6C /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02DAA137277130D5006A5F6C /* CardView.swift */; };
 		02E1754A277E4D2300EFDB01 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E17549277E4D2300EFDB01 /* SettingsView.swift */; };
 		02E1754C277E4D3300EFDB01 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E1754B277E4D3300EFDB01 /* SettingsViewModel.swift */; };
+		02E1754E278674D300EFDB01 /* CardListDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E1754D278674D300EFDB01 /* CardListDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -101,6 +102,7 @@
 		02DAA137277130D5006A5F6C /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		02E17549277E4D2300EFDB01 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		02E1754B277E4D3300EFDB01 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
+		02E1754D278674D300EFDB01 /* CardListDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardListDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -241,6 +243,7 @@
 			isa = PBXGroup;
 			children = (
 				02DAA13327713005006A5F6C /* CardListView.swift */,
+				02E1754D278674D300EFDB01 /* CardListDetailView.swift */,
 				02DAA13527713074006A5F6C /* NewCardForm.swift */,
 				02DAA137277130D5006A5F6C /* CardView.swift */,
 				02474368277A6B5500933EEE /* CardCell.swift */,
@@ -404,6 +407,7 @@
 				0247436B277BF8FB00933EEE /* Constants.swift in Sources */,
 				02474369277A6B5600933EEE /* CardCell.swift in Sources */,
 				024743462773DAE300933EEE /* Secrets.swift in Sources */,
+				02E1754E278674D300EFDB01 /* CardListDetailView.swift in Sources */,
 				02E1754C277E4D3300EFDB01 /* SettingsViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

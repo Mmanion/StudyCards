@@ -17,7 +17,8 @@ struct CardListView: View {
     NavigationView {
         List {
             ForEach(cardListViewModel.cardViewModels) { cardVM in
-                NavigationLink(destination: CardListDetailView(card: cardVM))
+                // Figure out transition View
+                // NavigationLink(destination: CardListDetailView(card: cardVM))
                 CardCell(cardVM: cardVM)
             }
             .onDelete(perform: cardListViewModel.delete)

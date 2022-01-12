@@ -9,18 +9,20 @@ import SwiftUI
 
 struct CardListDetailView: View {
     
-    let card: Card
+ //   @ObservedObject var cardListDetailViewModel = CardListDetailViewModel()
+    
+    let cardVM: CardViewModel
     
     var body: some View {
-        Text("\(card.cardText)")
+        Text("\(cardVM.card.cardText)")
     }
 }
 
 struct CardListDetailView_Previews: PreviewProvider {
-    @State static var cardTest: Card = testData[0]
+    @State static var cardVM = CardViewModel(card: testData[0])
 
     static var previews: some View {
         // fix CardListDetailView preview bug
-        CardListDetailView(card: cardTest)
+        CardListDetailView(cardVM: cardVM)
     }
 }

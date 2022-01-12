@@ -15,16 +15,18 @@ struct CardCell: View {
     //var onCommit: (Card) -> (Void) = { _ in }
     
     var body: some View {
-        HStack {
-            Image(systemName: cardVM.card.active ? "checkmark.circle.fill" : "circle")
-                .resizable()
-                .frame(width: 30, height: 30)
-                .onTapGesture {
-                    // not the SwiftUI way of doing things, research further.
-                    self.cardVM.card.active.toggle()
-                    self.cardVM.toggleActive(card: cardVM.card)
-                }
-            Text("\(cardVM.card.cardText)").font(.custom("Hiragino Sans", size: 14)).padding()
+        NavigationLink(destination: CardListDetailView(cardVM: cardVM)) {
+            HStack {
+                Image(systemName: cardVM.card.active ? "checkmark.circle.fill" : "circle")
+                    .resizable()
+                    .frame(width: 30, height: 30)
+                    .onTapGesture {
+                        // not the SwiftUI way of doing things, research further.
+                        self.cardVM.card.active.toggle()
+                        self.cardVM.toggleActive(card: cardVM.card)
+                    }
+                Text("\(cardVM.card.cardText)").font(.custom("Hiragino Sans", size: 14)).padding()
+            }
         }
     }
 }
